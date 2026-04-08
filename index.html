@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B-Webs — We Build Stunning Websites</title>
+    <link rel="icon" type="image/png" href="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -86,7 +87,7 @@
             background: var(--nav-bg); backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255,255,255,0.6);
-            border-radius: 50px; padding: 12px 32px;
+            border-radius: 50px; padding: 10px 32px;
             box-shadow: 0 4px 24px rgba(0,0,0,0.04);
             transition: all 0.4s var(--ease);
         }
@@ -96,7 +97,10 @@
             background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             text-decoration: none; letter-spacing: -0.5px;
+            transition: transform 0.3s var(--ease);
         }
+        .nav-logo:hover { transform: scale(1.05); }
+
         .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
         .nav-links a {
             text-decoration: none; color: var(--text-secondary);
@@ -280,14 +284,12 @@
             background: var(--bg-primary); box-shadow: var(--glass-shadow);
             display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
         }
-        .about-visual-icon {
-            width: 80px; height: 80px;
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            border-radius: 24px; display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 2rem; animation: iconF 4s ease-in-out infinite;
+        .about-visual-logo {
+            height: 70px; width: auto;
+            animation: iconF 4s ease-in-out infinite;
+            filter: drop-shadow(0 4px 16px rgba(99,102,241,0.25));
         }
-        @keyframes iconF { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-10px) rotate(3deg)} }
-        .about-visual-text { font-weight: 700; font-size: 1.1rem; }
+        @keyframes iconF { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-10px) rotate(2deg)} }
         .about-visual-sub { font-size: 0.85rem; color: var(--text-muted); }
 
         .floating-card {
@@ -456,7 +458,14 @@
         }
         .footer-inner { max-width: 1200px; margin: 0 auto; }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand .nav-logo { font-size: 1.6rem; }
+        .footer-logo {
+            display: inline-flex; align-items: center; text-decoration: none;
+            height: 48px; width: auto; margin-bottom: 0;
+            filter: brightness(0) invert(1);
+            transition: filter 0.3s, transform 0.3s var(--ease);
+        }
+        .footer-logo:hover { filter: brightness(0) invert(1) drop-shadow(0 0 12px rgba(99,102,241,0.5)); transform: scale(1.05); }
+        .footer-logo img { height: 100%; width: auto; object-fit: contain; }
         .footer-brand p { font-size: 0.9rem; line-height: 1.7; margin-top: 16px; color: rgba(255,255,255,0.5); }
         .footer-socials { display: flex; gap: 12px; margin-top: 20px; }
         .footer-socials a {
@@ -498,6 +507,7 @@
             .footer-grid { grid-template-columns: 1fr; gap: 28px; }
             .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
             .section { padding: 72px 20px; }
+            .contact-form { padding: 28px 20px; }
         }
     </style>
 </head>
@@ -591,10 +601,7 @@
         <div class="about-grid">
             <div class="about-visual reveal-left">
                 <div class="about-visual-inner">
-                    <div class="about-visual-icon">
-                        <span class="iconify" data-icon="lucide:code-2" data-width="36"></span>
-                    </div>
-                    <div class="about-visual-text">B-Webs</div>
+                    <img src="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe" alt="B-Webs" class="about-visual-logo">
                     <div class="about-visual-sub">Crafting Digital Excellence</div>
                 </div>
                 <div class="floating-card">
@@ -734,7 +741,6 @@
         </div>
         <div class="testimonials-wrap reveal-scale d3">
             <div class="testimonials-track" id="tTrack">
-                <!-- Set 1 -->
                 <div class="t-card">
                     <div class="t-stars"><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span></div>
                     <p>"B-Webs completely transformed our online presence. The website they built is fast, beautiful, and our conversions have doubled since launch."</p>
@@ -755,7 +761,7 @@
                     <p>"Our restaurant's website looks absolutely stunning. B-Webs captured the vibe of our brand perfectly. Highly recommend!"</p>
                     <div class="t-author"><div class="t-avatar">NV</div><div><div class="t-name">Neha Verma</div><div class="t-role">Owner, The Spice Kitchen</div></div></div>
                 </div>
-                <!-- Set 2 (duplicate for infinite scroll) -->
+                <!-- Duplicate set for seamless infinite scroll -->
                 <div class="t-card">
                     <div class="t-stars"><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span><span class="iconify" data-icon="lucide:star" data-width="16"></span></div>
                     <p>"B-Webs completely transformed our online presence. The website they built is fast, beautiful, and our conversions have doubled since launch."</p>
@@ -842,7 +848,9 @@
     <div class="footer-inner">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="#" class="nav-logo">B-Webs</a>
+                <a href="#" class="footer-logo">
+                    <img src="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe" alt="B-Webs">
+                </a>
                 <p>We build stunning, high-performance websites that help businesses grow and stand out in the digital world.</p>
                 <div class="footer-socials">
                     <a href="https://instagram.com/b_webs.official" target="_blank" rel="noopener" aria-label="Instagram">
@@ -879,9 +887,9 @@
             <div>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="tel:+918136892484">+91 9605157199</a></li>
+                     <li><a href="tel:+918136892484">+91 9605157199</a></li>
                     <li><a href="https://instagram.com/b_webs.official" target="_blank" rel="noopener">@b_webs.official</a></li>
-                    <li><a href="https://www.b-webs.com/" target="_blank" rel="noopener">www.b-webs.com</a></li>
+                    <li><a href="https://wa.me/9605157199" target="_blank" rel="noopener">Whatsapp</a></li>
                 </ul>
             </div>
         </div>
@@ -942,7 +950,6 @@ for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     particles.forEach(p => { p.update(); p.draw(); });
-    // Draw connections
     for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
@@ -971,7 +978,6 @@ function animateHero() {
     const stats = document.getElementById('heroStats');
 
     setTimeout(() => { badge.style.transition = 'all 0.8s cubic-bezier(0.16,1,0.3,1)'; badge.style.opacity = '1'; badge.style.transform = 'translateY(0)'; }, 200);
-
     words.forEach((word, i) => {
         setTimeout(() => {
             word.style.transition = 'all 0.8s cubic-bezier(0.16,1,0.3,1)';
@@ -979,7 +985,6 @@ function animateHero() {
             word.style.transform = 'translateY(0) rotateX(0deg)';
         }, 400 + i * 150);
     });
-
     setTimeout(() => { sub.style.transition = 'all 0.8s cubic-bezier(0.16,1,0.3,1)'; sub.style.opacity = '1'; sub.style.transform = 'translateY(0)'; }, 400 + words.length * 150 + 100);
     setTimeout(() => { btns.style.transition = 'all 0.8s cubic-bezier(0.16,1,0.3,1)'; btns.style.opacity = '1'; btns.style.transform = 'translateY(0)'; }, 400 + words.length * 150 + 250);
     setTimeout(() => {
@@ -1019,14 +1024,12 @@ function closeMobile() { mobileMenu.classList.remove('active'); }
 const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
     });
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 revealElements.forEach(el => revealObserver.observe(el));
 
-// ===== PROCESS TIMELINE ANIMATION =====
+// ===== PROCESS TIMELINE =====
 let processAnimated = false;
 const processObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1037,9 +1040,7 @@ const processObserver = new IntersectionObserver((entries) => {
             steps.forEach((step, i) => {
                 setTimeout(() => {
                     step.classList.add('lit');
-                    if (i < steps.length - 1) {
-                        fill.style.width = ((i + 1) / (steps.length - 1) * 75) + '%';
-                    }
+                    if (i < steps.length - 1) fill.style.width = ((i + 1) / (steps.length - 1) * 75) + '%';
                 }, i * 400);
             });
         }
@@ -1051,9 +1052,8 @@ processObserver.observe(document.getElementById('processTimeline'));
 function handleSubmit(e) {
     e.preventDefault();
     const toast = document.getElementById('formToast');
-    const form = document.getElementById('contactForm');
+    document.getElementById('contactForm').reset();
     toast.classList.add('show');
-    form.reset();
     setTimeout(() => toast.classList.remove('show'), 5000);
 }
 </script>
