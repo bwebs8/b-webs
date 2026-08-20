@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://www.b-webs.com/">
     <meta property="og:title" content="B-Webs | Website Design & Development Company">
     <meta property="og:description" content="Modern, fast, and affordable websites for businesses, schools, communities and online stores — built and optimized end to end.">
-    <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png">
+    <meta property="og:image" content="https://www.b-webs.com/logo-full.png">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="B-Webs">
 
@@ -26,10 +26,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="B-Webs | Website Design & Development Company">
     <meta name="twitter:description" content="Modern, fast, and affordable websites for businesses, schools, communities and online stores.">
-    <meta name="twitter:image" content="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png">
+    <meta name="twitter:image" content="https://www.b-webs.com/logo-full.png">
 
-    <link rel="icon" type="image/png" href="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe">
-    <link rel="apple-touch-icon" href="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -42,8 +42,8 @@
       "@type": "ProfessionalService",
       "name": "B-Webs",
       "url": "https://www.b-webs.com/",
-      "logo": "https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png",
-      "image": "https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png",
+      "logo": "https://www.b-webs.com/logo-full.png",
+      "image": "https://www.b-webs.com/logo-full.png",
       "description": "B-Webs designs and builds modern, fast, mobile-friendly websites for businesses, schools, communities and online stores.",
       "telephone": "+91-8136892484",
       "email": "info@b-webs.com",
@@ -144,11 +144,15 @@
         }
         .navbar.scrolled .navbar-inner { box-shadow: 0 8px 40px rgba(99,102,241,0.08); }
         .nav-logo {
+            display: flex; align-items: center; gap: 10px;
             font-size: 1.5rem; font-weight: 900;
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             text-decoration: none; letter-spacing: -0.5px;
             transition: transform 0.3s var(--ease);
+        }
+        .nav-logo img { height: 34px; width: auto; }
+        .nav-logo span {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         .nav-logo:hover { transform: scale(1.05); }
 
@@ -568,7 +572,7 @@
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
     <div class="navbar-inner">
-        <a href="#" class="nav-logo">B-Webs</a>
+        <a href="#" class="nav-logo"><img src="logo-icon.png" alt="B-Webs logo" width="34" height="34"><span>B-Webs</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -647,7 +651,7 @@
         <div class="about-grid">
             <div class="about-visual reveal-left">
                 <div class="about-visual-inner">
-                    <img src="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe" alt="B-Webs logo" class="about-visual-logo" width="140" height="70" loading="lazy">
+                    <img src="logo-icon.png" alt="B-Webs logo" class="about-visual-logo" width="70" height="70" loading="lazy">
                     <div class="about-visual-sub">Crafting Digital Excellence</div>
                 </div>
                 <div class="floating-card">
@@ -871,7 +875,7 @@
                 </div>
             </div>
             <div class="whatsapp-card reveal-right">
-                <img src="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe" alt="B-Webs logo" class="wa-logo" width="72" height="36" loading="lazy">
+                <img src="logo-icon.png" alt="B-Webs logo" class="wa-logo" width="64" height="64" loading="lazy">
                 <h3 class="wa-title">Chat With Us on WhatsApp</h3>
                 <p class="wa-desc">Have a project in mind? Message us directly and our team will reply right away.</p>
                 <a href="https://wa.me/918136892484?text=Hi%20B-Webs%2C%20I%27d%20like%20to%20talk%20about%20a%20website." target="_blank" rel="noopener" class="wa-button">
@@ -894,7 +898,7 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#" class="footer-logo">
-                    <img src="https://z-cdn-media.chatglm.cn/files/bc54132f-47f1-4da7-b9bd-cb35b62e1d65.png?auth_key=1875558476-683bfa5d5af94f4fa825971d5ff22689-0-139fa22273ff34ed986fc98326360fbe" alt="B-Webs logo" width="140" height="48" loading="lazy">
+                    <img src="logo-icon.png" alt="B-Webs logo" width="56" height="56" loading="lazy">
                 </a>
                 <p>We build stunning, high-performance websites that help businesses grow and stand out in the digital world.</p>
                 <div class="footer-socials">
